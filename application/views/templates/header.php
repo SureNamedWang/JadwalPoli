@@ -25,4 +25,52 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../assets/css/core/bootstrap.min.css">
         
+        <style>
+            #btnJudul{
+                width:100%;border-radius:50px;
+            }
+            #judulID{
+                font-size: 3vh;font-weight:bolder;color:#1C75BC;
+            }
+            #judulEN{
+                margin-top:-2vh;font-weight:bolder;font-style:italic;
+            }
+            
+            #rowDataTable{
+                max-height: 85%;
+            }
+            #colDataTable{
+                border-radius:50px;
+                background: rgb(255,189,34);
+                background: linear-gradient(0deg, rgba(255,189,34,1) 0%, rgba(255,74,77,1) 100%);
+            }
+            #tableDataTable{
+                height: 90%;text-align:center;background-color:whitesmoke; border-radius:50px;
+            }
+            
+            #rowFooter{
+                max-height: 10%;max-width:100%;
+            }
+            #textFooter1{
+                color:yellow;font-style:italic;font-weight:bolder;font-size:3vw;
+            }
+            #textFooter2{
+                color:white;font-style:italic;font-weight:bolder;font-size:3vw;
+            }
+
+            /* img */
+            #imgCross{
+                margin-top:40vh;margin-left:-3vw;max-width:10vw;max-height:10vh;
+            }
+            #imgChar{
+                max-width:100%;
+                margin-left:1vw;
+            }
+            #imgCapsule{
+                max-width:15vw;max-height:15vh;margin-left:2vw;margin-top:-9vh
+            }
+            #imgHeart{
+                max-width:7vw;max-height:7vh;margin-top:-3vh;margin-left:-5vw;
+            }
+        </style>
     </head>
