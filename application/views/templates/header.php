@@ -52,10 +52,10 @@
                 max-height: 10%;max-width:100%;
             }
             #textFooter1{
-                color:yellow;font-style:italic;font-weight:bolder;font-size:3vw;
+                color:yellow;font-style:italic;font-weight:bolder;font-size:2.5vw;
             }
             #textFooter2{
-                color:white;font-style:italic;font-weight:bolder;font-size:3vw;
+                color:white;font-style:italic;font-weight:bolder;font-size:2vw;margin-left:-10vw;margin-top:1vh;
             }
 
             /* img */

@@ -59,7 +59,7 @@
           Info & Appointment
         </div>
         <div class="col" id="textFooter2">
-          031-2975 777 <br>EXT 2001/2002
+          031-2975 777 EXT 2001/2002
         </div>
         <div class="col-sm-1">
           <img src="../assets/img/bg/hearth.png" id="imgHeart">  
