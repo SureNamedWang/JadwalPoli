@@ -1,5 +1,5 @@
-<body class="bg-dark" style="background-image: url('../assets/img/bg/mainbg.jpg');background-size: cover;max-width:99%">
-  <div class="row" style="max-height: 10%;max-width:100%">
+<body class="bg-dark container" id="bodyMain">
+  <div class="row" style="height: 10%;max-width:99%;margin-bottom:5vh">
     <div class="col"></div>
     <div class="col">
       <button id="btnJudul" class="button btn btn-light my-5">
@@ -7,7 +7,9 @@
         <p id="judulEN">Jadwal Praktek Dokter</p>
       </button>
     </div>
-    <div class="col"></div>
+    <div class="col">
+      <button id="jam" class="button btn btn-light">12:00:00</button>
+    </div>
   </div>
   <div class="row" id="rowDataTable">
     <div class="col">
@@ -23,6 +25,7 @@
           <th>STATUS</th>
         </thead>
         <tbody>
+          <?php for($i=0;$i<10;$i++) {?>
           <tr>
             <td>John Doe</td>
             <td>Dentistry</td>
@@ -30,20 +33,7 @@
             <td>17:00</td>
             <td>CANCELED</td>
           </tr>
-          <tr>
-            <td>John Doe</td>
-            <td>Dentistry</td>
-            <td>07:00</td>
-            <td>17:00</td>
-            <td>CANCELED</td>
-          </tr>
-          <tr>
-            <td>John Doe</td>
-            <td>Dentistry</td>
-            <td>07:00</td>
-            <td>17:00</td>
-            <td>CANCELED</td>
-          </tr>
+          <?php } ?>
         </tbody>
       </table>
     </div>
@@ -65,6 +55,9 @@
           <img src="../assets/img/bg/hearth.png" id="imgHeart">  
           <img src="../assets/img/bg/capsule.png" id="imgCapsule">
         </div>
+        <marquee behavior="scroll" direction="left" style="color:white;font-weight:900;font-size:2vh">
+          Password WIFI : nationalhospital12345
+        </marquee>
       </div>
     </div>
     <div class="col">

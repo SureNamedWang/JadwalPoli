@@ -26,18 +26,34 @@
         <link rel="stylesheet" href="../assets/css/core/bootstrap.min.css">
         
         <style>
+            #bodyMain{
+                background-image: url('../assets/img/bg/mainbg.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                max-width: 99%;
+                height: 1080px;
+            }
             #btnJudul{
                 width:100%;border-radius:50px;
             }
             #judulID{
-                font-size: 3vh;font-weight:bolder;color:#1C75BC;
+                font-size: 3vh;font-weight:900;color:#1C75BC;
             }
             #judulEN{
                 margin-top:-2vh;font-weight:bolder;font-style:italic;
             }
-            
+            #jam{
+                font-size:2vh;
+                font-weight: 900;
+                width:80%;
+                border-radius:50px;
+                margin-top: 5vh;
+                margin-left: 5vw;
+            }
             #rowDataTable{
-                max-height: 85%;
+                height: 70%;
+                margin-bottom:2vh;
             }
             #colDataTable{
                 border-radius:50px;
@@ -49,7 +65,7 @@
             }
             
             #rowFooter{
-                max-height: 10%;max-width:100%;
+                max-height: 5%;max-width:100%;
             }
             #textFooter1{
                 color:yellow;font-style:italic;font-weight:bolder;font-size:2.5vw;
@@ -63,8 +79,9 @@
                 margin-top:40vh;margin-left:-3vw;max-width:10vw;max-height:10vh;
             }
             #imgChar{
-                max-width:100%;
+                width:100%;
                 margin-left:1vw;
+                margin-top:15vh;
             }
             #imgCapsule{
                 max-width:15vw;max-height:15vh;margin-left:2vw;margin-top:-9vh
