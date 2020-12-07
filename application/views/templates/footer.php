@@ -38,7 +38,7 @@
 
         $(document).ready( function () {
             startTime();
-            $('#tableDataTable').DataTable({
+            var tabelSchedule = $('#tableDataTable').DataTable({
                 // paging : false,
                 searching : false,
                 ordering : false,
@@ -80,6 +80,13 @@
                     {"data":'status' , "width":"15%"},
                 ],
             });
+            setInterval(function(){ 
+                var info = tabelSchedule.page.info();
+                var pageNum = (info.page < info.pages) ? info.page + 1 : 1;
+                tabelSchedule.page(pageNum).draw(false);    
+            }, 10000);
         });
+
+          
     </script>
 </html>

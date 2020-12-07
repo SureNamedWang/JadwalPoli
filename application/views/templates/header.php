@@ -61,7 +61,7 @@
                 background: linear-gradient(0deg, rgba(255,189,34,1) 0%, rgba(255,74,77,1) 100%);
             }
             #tableDataTable{
-                height: 90%;
+                height: 80%;
                 text-align:center;
                 color: black; 
                 border-radius:50px;
@@ -69,7 +69,14 @@
                 font-size: 1vw;
             }
             tr{
-                height: 5.5vh;
+                height: 6vh;
+            }
+            
+            #tableDataTable_paginate{
+                visibility: hidden;
+            }
+            #tableDataTable_processing{
+                visibility: hidden;
             }
             #rowFooter{
                 max-height: 5%;max-width:100%;

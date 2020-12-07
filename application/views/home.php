@@ -16,7 +16,7 @@
       <img src="../assets/img/bg/characters.png" id="imgChar">
     </div>
     <div class="col-sm-8" id="colDataTable">
-      <table class="table table-primary table-striped table-borderless mt-4" id="tableDataTable">
+      <table class="table table-light table-striped table-borderless mt-4" id="tableDataTable">
         <thead>
           <th>DOCTOR</th>
           <th>SPECIALTY</th>
