@@ -16,24 +16,16 @@
       <img src="../assets/img/bg/characters.png" id="imgChar">
     </div>
     <div class="col-sm-8" id="colDataTable">
-      <table class="table table-striped table-borderless mt-4" id="tableDataTable">
+      <table class="table table-primary table-striped table-borderless mt-4" id="tableDataTable">
         <thead>
           <th>DOCTOR</th>
           <th>SPECIALTY</th>
-          <th>START</th>
-          <th>END</th>
+          <th>SCHEDULE</th>
+          <th>ROOM</th>
           <th>STATUS</th>
         </thead>
         <tbody>
-          <?php for($i=0;$i<10;$i++) {?>
-          <tr>
-            <td>John Doe</td>
-            <td>Dentistry</td>
-            <td>07:00</td>
-            <td>17:00</td>
-            <td>CANCELED</td>
-          </tr>
-          <?php } ?>
+          
         </tbody>
       </table>
     </div>

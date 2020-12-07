@@ -61,17 +61,24 @@
                 background: linear-gradient(0deg, rgba(255,189,34,1) 0%, rgba(255,74,77,1) 100%);
             }
             #tableDataTable{
-                height: 90%;text-align:center;background-color:whitesmoke; border-radius:50px;
+                height: 90%;
+                text-align:center;
+                color: black; 
+                border-radius:50px;
+                font-weight: bolder;
+                font-size: 1vw;
             }
-            
+            tr{
+                height: 5.5vh;
+            }
             #rowFooter{
                 max-height: 5%;max-width:100%;
             }
             #textFooter1{
-                color:yellow;font-style:italic;font-weight:bolder;font-size:2.5vw;
+                color:yellow;font-style:italic;font-weight:bolder;font-size:2.5vw;margin-top: 2vh;
             }
             #textFooter2{
-                color:white;font-style:italic;font-weight:bolder;font-size:2vw;margin-left:-10vw;margin-top:1vh;
+                color:white;font-style:italic;font-weight:bolder;font-size:2vw;margin-left:-10vw;margin-top:3vh;
             }
 
             /* img */

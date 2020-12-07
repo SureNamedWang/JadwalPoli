@@ -38,6 +38,48 @@
 
         $(document).ready( function () {
             startTime();
+            $('#tableDataTable').DataTable({
+                // paging : false,
+                searching : false,
+                ordering : false,
+                lengthChange : false,
+                bInfo : false,
+                "pageLength" : 10,
+
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    "url" : window.location.origin+"/JadwalPoli/Home/listSchedule",
+                    "dataType": "json",
+                    "type": "POST",
+                    data: function (d) {
+                        d.filter=$('#filter').val();
+                        // d.departemen=idDep;
+                    },
+
+                    "complete": function (json, type) {
+                            // console.log(json);
+                            temp=json['responseText'].substr ( json['responseText'].indexOf ( 'token' ) + 8 );
+                            temp2=temp.split('"');
+                            $token=temp2[0];
+                        // $('#token').val(temp2[0]);
+
+                    },
+                    "error": function (xhr, ajaxOptions, thrownError) {
+                        //alert(xhr.status);
+                        // alert(xhr.responseText);
+                        console.log(xhr.responseText);
+                        // alert(thrownError);
+                    }
+                },
+                "columns": [
+                    {"data":'paramedicname', "width":"35%",},
+                    {"data":'doctor_speciality' , "width":"30%"},
+                    {"data":'time_slot' , "width":"10%"},
+                    {"data":'room' , "width":"10%"},
+                    {"data":'status' , "width":"15%"},
+                ],
+            });
         });
     </script>
 </html>
