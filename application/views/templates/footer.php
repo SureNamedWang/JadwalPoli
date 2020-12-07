@@ -36,8 +36,67 @@
             return i;
         }
 
+        <?php if($halaman=="doktor"){?>
+            const listDokter=[];
+            var counterDokter=0;
+            
+            <?php foreach($doktor as $dok){?>
+                listDokter.push('<?php echo ($dok->nama."@@".$dok->namaDepartemen."@@".$dok->departementName."@@".$dok->foto); ?>');
+            <?php } ?>
+            
+            function isiDokter(){
+                if(counterDokter>=listDokter.length){
+                    window.location.href = '<?php echo base_url() ?>Home/';
+                }
+                var isi='';
+                var currDept=listDokter[counterDokter].split('@@');
+                $('#namaDep').html(currDept[1]+' | '+currDept[2]);
+                for($i=0;$i<3;$i++){
+                    if(counterDokter<listDokter.length){
+                        var dataDokter=listDokter[counterDokter].split('@@');
+                        if(dataDokter[1]==currDept[1]){
+                            isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame1.png');height:33%">`+
+                                `<div class="row mt-2 px-0 py-0">`+
+                                    `<div class="col">`+
+                                    `<img class="mt-4" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 24vh;width:17vw">`+
+                                    `</div>`+
+                                    `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:9vh;margin-left:-2vw;text-align:justify">`+
+                                        dataDokter[0]+
+                                    `</div>`+
+                                `</div>`+
+                            `</div>`;
+                            counterDokter++;
+                        }
+                    }
+                    if(counterDokter<listDokter.length){
+                        var dataDokter=listDokter[counterDokter].split('@@');
+                        if(dataDokter[1]==currDept[1]){
+                            isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame2.png');height:33%">`+
+                                `<div class="row mt-2 px-0 py-0">`+
+                                    `<div class="col">`+
+                                    `<img class="mt-3" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 25vh;width:16.5vw">`+
+                                    `</div>`+    
+                                    `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:8vh;margin-left:-2vw;text-align:justify">`+
+                                        dataDokter[0]+
+                                    `</div>`+
+                                `</div>`+
+                            `</div>`;
+                            counterDokter++;
+                        }
+                    }
+                }
+                
+                $('#rowDoktor').html(isi);
+                var dd = setTimeout(isiDokter,10000);
+            }
+        <?php }?>
+
         $(document).ready( function () {
             startTime();
+            <?php if($halaman=="doktor"){ ?>
+            isiDokter();
+            <?php } ?>
+            <?php if($halaman=="home"){ ?>
             var tabelSchedule = $('#tableDataTable').DataTable({
                 // paging : false,
                 searching : false,
@@ -85,8 +144,7 @@
                 var pageNum = (info.page < info.pages) ? info.page + 1 : 1;
                 tabelSchedule.page(pageNum).draw(false);    
             }, 10000);
+            <?php } ?>
         });
-
-          
     </script>
 </html>
