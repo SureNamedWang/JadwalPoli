@@ -46,7 +46,7 @@
             
             function isiDokter(){
                 if(counterDokter>=listDokter.length){
-                    window.location.href = '<?php echo base_url() ?>Home/';
+                    // window.location.href = '<?php echo base_url() ?>Home/';
                 }
                 var isi='';
                 var currDept=listDokter[counterDokter].split('@@');
@@ -58,7 +58,7 @@
                             isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame1.png');height:33%">`+
                                 `<div class="row mt-2 px-0 py-0">`+
                                     `<div class="col">`+
-                                    `<img class="mt-4" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 24vh;width:17vw">`+
+                                    `<img class="mt-4 ml-3" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 245px;width:300px">`+
                                     `</div>`+
                                     `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:9vh;margin-left:-2vw;text-align:justify">`+
                                         dataDokter[0]+
@@ -74,7 +74,7 @@
                             isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame2.png');height:33%">`+
                                 `<div class="row mt-2 px-0 py-0">`+
                                     `<div class="col">`+
-                                    `<img class="mt-3" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 25vh;width:16.5vw">`+
+                                    `<img class="mt-4 ml-3" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 245px;width:290px">`+
                                     `</div>`+    
                                     `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:8vh;margin-left:-2vw;text-align:justify">`+
                                         dataDokter[0]+
@@ -143,7 +143,7 @@
                 var info = tabelSchedule.page.info();
                 var pageNum = (info.page < info.pages) ? info.page + 1 : 1;
                 tabelSchedule.page(pageNum).draw(false);    
-            }, 10000);
+            }, 60000);
             <?php } ?>
         });
     </script>

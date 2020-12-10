@@ -43,6 +43,9 @@
             #judulEN{
                 margin-top:-2vh;font-weight:bolder;font-style:italic;
             }
+            #namaDep{
+                margin-top:-3vh;font-weight:900;font-style:italic;font-size: 2.5vh;
+            }
             #jam{
                 font-size:2vh;
                 font-weight: 900;
