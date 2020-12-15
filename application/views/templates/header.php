@@ -29,10 +29,10 @@
             #bodyMain{
                 background-image: url('../assets/img/bg/mainbg.jpg');
                 background-size: cover;
-                background-position: center;
+                /* background-position: center; */
                 background-repeat: no-repeat;
-                max-width: 99%;
-                height: 1080px;
+                max-width: 100%;
+                max-height: 100%;
             }
             #btnJudul{
                 width:100%;border-radius:50px;
@@ -51,28 +51,30 @@
                 font-weight: 900;
                 width:80%;
                 border-radius:50px;
-                margin-top: 5vh;
+                margin-top: 3vh;
                 margin-left: 5vw;
-            }
-            #rowDataTable{
-                height: 70%;
-                margin-bottom:2vh;
             }
             #colDataTable{
                 border-radius:50px;
                 background: rgb(255,189,34);
                 background: linear-gradient(0deg, rgba(255,189,34,1) 0%, rgba(255,74,77,1) 100%);
+                height:500px;
+                margin: 5px 5px 0px 0px;
             }
             #tableDataTable{
-                height: 80%;
+                /* height: 720px; */
                 text-align:center;
                 color: black; 
                 border-radius:50px;
                 font-weight: bolder;
-                font-size: 1vw;
+                font-size: 13px;
+                margin-top: 5px;
             }
+            
             tr{
-                height: 6vh;
+                height: 40px;
+                padding:0px 0px 0px 0px;
+                margin:0px 0px 0px 0px;
             }
             
             #tableDataTable_paginate{
@@ -80,9 +82,6 @@
             }
             #tableDataTable_processing{
                 visibility: hidden;
-            }
-            #rowFooter{
-                max-height: 5%;max-width:100%;
             }
             #textFooter1{
                 color:yellow;font-style:italic;font-weight:bolder;font-size:2.5vw;margin-top: 2vh;
@@ -92,19 +91,20 @@
             }
 
             /* img */
-            #imgCross{
-                margin-top:40vh;margin-left:-3vw;max-width:10vw;max-height:10vh;
-            }
+            
             #imgChar{
                 width:100%;
                 margin-left:1vw;
                 margin-top:15vh;
             }
+            #imgCross{
+                margin-top:-15vh;margin-left:16vw;max-width:8vw;max-height:8vh;
+            }
             #imgCapsule{
-                max-width:15vw;max-height:15vh;margin-left:2vw;margin-top:-9vh
+                max-width:15vw;max-height:15vh;margin-left:10vw;margin-top:-15vh
             }
             #imgHeart{
-                max-width:7vw;max-height:7vh;margin-top:-3vh;margin-left:-5vw;
+                max-width:7vw;max-height:7vh;margin-top:-10vh;margin-left:-5vw;
             }
         </style>
     </head>

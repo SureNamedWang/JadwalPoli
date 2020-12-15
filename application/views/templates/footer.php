@@ -50,17 +50,17 @@
                 }
                 var isi='';
                 var currDept=listDokter[counterDokter].split('@@');
-                $('#namaDep').html(currDept[1]+' | '+currDept[2]);
+                $('#namaDep').html(currDept[1]+'<br>'+currDept[2]);
                 for($i=0;$i<3;$i++){
                     if(counterDokter<listDokter.length){
                         var dataDokter=listDokter[counterDokter].split('@@');
                         if(dataDokter[1]==currDept[1]){
-                            isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame1.png');height:33%">`+
+                            isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame1.png');background-size:650px;">`+
                                 `<div class="row mt-2 px-0 py-0">`+
                                     `<div class="col">`+
-                                    `<img class="mt-4 ml-3" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 245px;width:300px">`+
+                                    `<img class="ml-1 mt-3" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 145px;width:165px;margin-bottom:5px">`+
                                     `</div>`+
-                                    `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:9vh;margin-left:-2vw;text-align:justify">`+
+                                    `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:8vh;margin-left:-15vw;text-align:left">`+
                                         dataDokter[0]+
                                     `</div>`+
                                 `</div>`+
@@ -71,12 +71,12 @@
                     if(counterDokter<listDokter.length){
                         var dataDokter=listDokter[counterDokter].split('@@');
                         if(dataDokter[1]==currDept[1]){
-                            isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame2.png');height:33%">`+
+                            isi+=`<div class="col-sm-6" style="background-image: url('../assets/img/bg/frame2.png');background-size:650px;">`+
                                 `<div class="row mt-2 px-0 py-0">`+
                                     `<div class="col">`+
-                                    `<img class="mt-4 ml-3" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 245px;width:290px">`+
+                                    `<img class="mx-2 my-2" src="../assets/img/doktor/`+dataDokter[3]+`" style="height: 150px;width:155px">`+
                                     `</div>`+    
-                                    `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:8vh;margin-left:-2vw;text-align:justify">`+
+                                    `<div class="col" style="color:black;font-weight:bolder;font-size:3vh;margin-top:8vh;margin-left:-15vw;text-align:left">`+
                                         dataDokter[0]+
                                     `</div>`+
                                 `</div>`+
@@ -133,17 +133,17 @@
                 },
                 "columns": [
                     {"data":'paramedicname', "width":"35%",},
-                    {"data":'doctor_speciality' , "width":"30%"},
+                    {"data":'doctor_speciality' , "width":"25%"},
                     {"data":'time_slot' , "width":"10%"},
                     {"data":'room' , "width":"10%"},
-                    {"data":'status' , "width":"15%"},
+                    {"data":'status' , "width":"20%"},
                 ],
             });
             setInterval(function(){ 
                 var info = tabelSchedule.page.info();
                 var pageNum = (info.page < info.pages) ? info.page + 1 : 1;
                 tabelSchedule.page(pageNum).draw(false);    
-            }, 60000);
+            }, 5000);
             <?php } ?>
         });
     </script>

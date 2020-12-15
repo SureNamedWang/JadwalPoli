@@ -35,7 +35,13 @@ class Home extends CI_Controller
 		{
 			foreach ($posts as $post)
 			{
-				$nestedData['paramedicname'] = $post->paramedicname;
+				if(strlen($post->paramedicname)>50){
+					$namadr=substr($post->paramedicname,0,50)."...";
+				}
+				else{
+					$namadr=$post->paramedicname;
+				}
+				$nestedData['paramedicname'] = $namadr;
 				$nestedData['doctor_speciality'] = $post->doctor_speciality;
 				$nestedData['time_slot'] = $post->time_slot;
 				$nestedData['room'] = $post->room;
@@ -45,7 +51,7 @@ class Home extends CI_Controller
 				$counter++;
 			}
 			if($counter%$limit>0){
-				$cl=$counter%$limit;
+				$cl=$limit-($counter%$limit);
 				for($ii=0;$ii<$cl;$ii++){
 					$nestedData['paramedicname'] = "";
 					$nestedData['doctor_speciality'] = "";
